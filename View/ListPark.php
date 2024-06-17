@@ -53,37 +53,37 @@ mysqli_close($conexion);
                 <h3 class="text-white">Lista de Parques Recorridos</h3>
                 <?php if (mysqli_num_rows($result) > 0) : ?>
                     <div class="d-flex justify-content-center align-items-center" style="min-height: 100%;">
-                            <table class="table table-bordered align-items-center">
-                                <thead>
-                                    <tr class="table-dark">
-                                        <th>Nombre del Parque</th>
-                                        <th>Fecha de Visita</th>
-                                        <th>Valor de Entrada</th>
-                                        <th>Dirección del Parque</th>
-                                        <th>Recorrido Realizado</th>
-                                        <th>Kilómetros Recorridos</th>
+                        <table class="table table-bordered align-items-center">
+                            <thead>
+                                <tr class="table-dark">
+                                    <th>Nombre del Parque</th>
+                                    <th>Fecha de Visita</th>
+                                    <th>Valor de Entrada</th>
+                                    <th>Dirección del Parque</th>
+                                    <th>Recorrido Realizado</th>
+                                    <th>Kilómetros Recorridos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php while ($parque = mysqli_fetch_assoc($result)) : ?>
+                                    <tr>
+                                        <td><?php echo $parque['NOMBRE_PARQUE']; ?></td>
+                                        <td><?php echo $parque['FECHA_VISITA']; ?></td>
+                                        <td><?php echo $parque['VALOR_ENTRADA']; ?></td>
+                                        <td><?php echo $parque['DIRECCION_PARQUE']; ?></td>
+                                        <td><?php echo $parque['RECORRIDO_REALIZADO']; ?></td>
+                                        <td><?php echo $parque['KILOMETROS_RECORRIDO']; ?></td>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    <?php while ($parque = mysqli_fetch_assoc($result)) : ?>
-                                        <tr>
-                                            <td><?php echo $parque['NOMBRE_PARQUE']; ?></td>
-                                            <td><?php echo $parque['FECHA_VISITA']; ?></td>
-                                            <td><?php echo $parque['VALOR_ENTRADA']; ?></td>
-                                            <td><?php echo $parque['DIRECCION_PARQUE']; ?></td>
-                                            <td><?php echo $parque['RECORRIDO_REALIZADO']; ?></td>
-                                            <td><?php echo $parque['KILOMETRO_REALIZADO']; ?></td>
-                                        </tr>
-                                    <?php endwhile; ?>
-                                </tbody>
-                            </table>
+                                <?php endwhile; ?>
+                            </tbody>
+                        </table>
                     </div>
-                    <?php else : ?>
-                        <p>No se encontraron parques registrados.</p>
-                    <?php endif; ?>
-                    </div>
+                <?php else : ?>
+                    <p>No se encontraron parques registrados.</p>
+                <?php endif; ?>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
