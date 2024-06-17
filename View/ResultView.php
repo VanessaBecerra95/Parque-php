@@ -22,20 +22,20 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./InputPark.php">Ingresar parque</a>
+                            <a class="nav-link text-white" href="./../View/InputPark.php">Ingresar parque</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./SearchPark.php">Buscar Parque</a>
+                            <a class="nav-link text-white" href="./../View/SearchPark.php">Buscar Parque</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./ListPark.php">Listar parques</a>
+                            <a class="nav-link text-white" href="./../View/ListPark.php">Listar parques</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
+
     <div class="container-fluid px-1 py-5 mx-auto">
         <div class="row d-flex justify-content-center">
             <div class="col-lg-9 col-11 text-center">

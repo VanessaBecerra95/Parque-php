@@ -29,7 +29,7 @@ $parque = $_SESSION['parque'];
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="./SearchParque.php">Buscador de parques</a>
+                            <a class="nav-link text-white" href="./SearchPark.php">Buscador de parques</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="./ListPark.php">Listar parques</a>
