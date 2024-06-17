@@ -64,7 +64,7 @@
                                             <td><?php echo $parque['VALOR_ENTRADA']; ?></td>
                                             <td><?php echo $parque['DIRECCION_PARQUE']; ?></td>
                                             <td><?php echo $parque['RECORRIDO_REALIZADO']; ?></td>
-                                            <td><?php echo $parque['KILOMETRO_REALIZADO']; ?></td>
+                                            <td><?php echo $parque['KILOMETROS_RECORRIDO']; ?></td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>

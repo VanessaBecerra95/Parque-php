@@ -5,7 +5,7 @@ class ModelCRUDParque
 {
     public function insertParque($name, $date, $inputValue, $address, $tourTaken, $kmTraveled)
     {
-        $query = "INSERT INTO tbl_parque(NOMBRE_PARQUE, FECHA_VISITA, VALOR_ENTRADA, DIRECCION_PARQUE, RECORRIDO_REALIZADO, KILOMETRO_REALIZADO) 
+        $query = "INSERT INTO tbl_parque(NOMBRE_PARQUE, FECHA_VISITA, VALOR_ENTRADA, DIRECCION_PARQUE, RECORRIDO_REALIZADO, KILOMETROS_RECORRIDO) 
        VALUES ('$name','$date','$inputValue','$address','$tourTaken','$kmTraveled')";
         $stringConnection = Conexion::conectar();
         if (mysqli_query($stringConnection, $query)) {
@@ -25,14 +25,14 @@ class ModelCRUDParque
         $query = "SELECT * FROM tbl_parque WHERE NOMBRE_PARQUE LIKE '%$name%'";
         $stringConnection = Conexion::conectar();
         $result = mysqli_query($stringConnection, $query);
-        
+
         $parques = array();
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $parques[] = $row;
             }
         }
-        
+
         return $parques;
     }
 }
